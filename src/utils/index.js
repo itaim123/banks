@@ -1,24 +1,5 @@
 import { DAYS } from '../constants';
 
-export const getDistance = (currentLocation, targetLocation) => {
-  const { x: currentX, y: currentY } = currentLocation;
-  const { x: targetX, y: targetY } = targetLocation;
-
-  return Math.sqrt(
-    Math.pow(currentX - targetX, 2) + Math.pow(currentY - targetY, 2)
-  );
-};
-
-export const getCurrentLocation = () => {
-  navigator.geolocation.getCurrentPosition(({ coords }) => {
-    console.log('Latitude is :', coords.latitude);
-    console.log('Longitude is :', coords.longitude);
-    const { latitude: x, longitude: y } = coords;
-    console.log('Current location', { x, y });
-    return { x, y };
-  });
-};
-
 export const checkIfClosed = (dayStr) => {
   const today = new Date().getDay();
   if (today === 6) return true;

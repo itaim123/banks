@@ -13,14 +13,10 @@ const Main = () => {
 
 
   const getCurrentLocation = () => {
-    console.log('TEST')
     setIsLoadingLocation(true);
     navigator.geolocation.getCurrentPosition(({ coords }) => {
-      console.log('Latitude is :', coords.latitude);
-      console.log('Longitude is :', coords.longitude);
       const { latitude, longitude } = coords;
       setCurrentLocation({ latitude, longitude });
-      console.log('Current location', { latitude, longitude });
       setIsLoadingLocation(false);
     });
   };

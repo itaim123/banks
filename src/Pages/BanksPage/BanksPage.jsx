@@ -20,7 +20,6 @@ const BanksList = () => {
         const { latitude, longitude } = currentLocation;
         axios.post(`http://localhost:5002/api/banks/getBanks/?latitude=${latitude}&longitude=${longitude}`).then(({ data }) => {
             setBanks(data);
-            console.log('useEffect', data);
         }).catch(e => {
             console.log('Set Err', e);
 
