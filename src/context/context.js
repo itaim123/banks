@@ -15,7 +15,6 @@ const ContextState = ({ children }) => {
 
   useEffect(() => {
     const banksFromLocal = localStorage?.getItem('fav');
-    console.log('LS!', banksFromLocal);
     if (banksFromLocal && banksFromLocal.length) {
       setFavoritesArray(JSON.parse(banksFromLocal));
     } else {
@@ -25,16 +24,13 @@ const ContextState = ({ children }) => {
 
   const removeFavorite = (id) => {
     const filteredIdArray = favoritesArray.filter((fav) => fav !== id);
-    console.log('Removing', id, { favoritesArray, filteredIdArray });
     setFavoritesArray(filteredIdArray);
     localStorage.setItem('fav', JSON.stringify(filteredIdArray));
   };
 
   const addFavorite = (id) => {
-    console.log('Add', favoritesArray);
     const addedFavArray = [...favoritesArray, id];
     setFavoritesArray(addedFavArray);
-    console.log('Adding', id, { favoritesArray });
     localStorage.setItem('fav', JSON.stringify(addedFavArray));
     setIsModal(true)
   };
