@@ -18,8 +18,8 @@ const BanksList = () => {
         }
 
         const { latitude, longitude } = currentLocation;
-        // axios.post(`https://banks-be.herokuapp.com/api/banks/getBanks/?latitude=${latitude}&longitude=${longitude}`).then(({ data }) => {
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/banks/getBanks/?latitude=${latitude}&longitude=${longitude}`).then(({ data }) => {
+        axios.post(`https://banks-be.herokuapp.com/api/banks/getBanks/?latitude=${latitude}&longitude=${longitude}`).then(({ data }) => {
+        // axios.post(`${process.env.REACT_APP_BACKEND_URL}/banks/getBanks/?latitude=${latitude}&longitude=${longitude}`).then(({ data }) => {
             setBanks(data);
         }).catch(e => {
             console.log('Set Err', e);
