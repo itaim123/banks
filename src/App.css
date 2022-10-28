@@ -11,8 +11,8 @@
   padding-top: 30px;
   max-width: 100vw;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 771px) {
   .page_wrapper {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
