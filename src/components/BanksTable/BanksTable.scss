@@ -1,10 +1,17 @@
 .banksTable {
-    width: 85vw;
-    max-width: 85vw;
-   td, th {
-    text-align: right;
-   }
-   .tableRowPicked {
-    background-color: #0070C91A;
-   }
+  width: 92vw;
+  max-width: 92vw;
+  display: flex;
+  justify-content: center;
+  .table {
+    table-layout: fixed;
+    width: 100vw;
+    td,
+    th {
+      text-align: right;
+    }
+    .tableRowPicked {
+      background-color: #0070c91a;
+    }
+  }
 }

@@ -22,7 +22,7 @@ const BanksTable = ({ banks }) => {
 
     return (
         <div className='banksTable'>
-            <table>
+            <table class='table'>
                 <tbody>
                     <BanksTableHeader />
                     {banksArray.map(bank => {

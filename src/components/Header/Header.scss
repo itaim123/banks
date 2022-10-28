@@ -1,0 +1,21 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    border-bottom: 1px solid #0070C91A;
+    padding: 15px;
+    background-color: #1284e1;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    .title {
+        cursor: pointer;
+    }
+    &>div {
+        padding: 0 20px;
+        cursor: default;
+        &:hover {
+            color: rgb(240, 234, 224)
+        }
+    }
+}

@@ -21,6 +21,12 @@
     min-width: 30px;
     overflow: visible;
     text-align: center;
+
+    @media only screen and (max-width: 320px) {
+      font-size: 0.8rem;
+      padding: 6px 18px;
+      margin: 20px 15px;
+    }
   }
 
   .button:hover {
@@ -39,4 +45,4 @@
     box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
     outline: none;
   }
-};
+}

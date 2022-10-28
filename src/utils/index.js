@@ -8,9 +8,7 @@ export const checkIfClosed = (dayStr) => {
 };
 
 export const banksMapper = (banks) => {
-  console.log('length 1', banks.length);
   banks = banks.filter(b=>b.distance <= 7)
-  console.log('length 2', banks.length);
   const banksNameMapper = {};
   for (let bank of banks) {
     if (bank.distance <= 7) {

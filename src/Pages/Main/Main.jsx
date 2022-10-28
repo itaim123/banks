@@ -24,7 +24,7 @@ const Main = () => {
   const goToBanksPage = () => navigate('/banksList')
 
   return <div className='main'>
-    {isLoadingLocation && <Loader label='מחפש...' />}
+    {isLoadingLocation && <Loader label='מחפש מיקום...' />}
     {!isLoadingLocation && !currentLocation &&
       <Button onClick={getCurrentLocation}>מצא את המיקום שלי</Button>}
     {

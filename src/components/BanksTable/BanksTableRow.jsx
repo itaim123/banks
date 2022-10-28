@@ -8,8 +8,6 @@ const BanksTableRow = ({ bank }) => {
     const isPicked = JSON.parse(localStorage.getItem('fav')).find(id=>id===bank._id);
     const [isFavorite, setIsFavorite] = useState(isPicked);
     
-    // const isPicked = favoritesArray.find(id => id === bank._id);
-    isPicked && console.log('IS PICKED', bank._id, bank)
     const addToFavoritesHandler = (id) => {
         const isAdd = !isFavorite;
         setIsFavorite(isAdd);
