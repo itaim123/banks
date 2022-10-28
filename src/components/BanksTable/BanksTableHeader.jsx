@@ -13,12 +13,12 @@ const BanksTableHeader = () => {
     <th>מספר סניף</th>
     <th>כתובת</th>
     <th>פעיל היום</th>
-    <th>מרחק בק״מ</th>
+    <th>מרחק</th>
 </tr>
 
     const filteredTable = <tr>
     <th>שם סניף</th>
-    <th>מרחק בק״מ</th>
+    <th>מרחק</th>
 </tr>
 
     return (
