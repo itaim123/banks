@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { Context } from '../../context/context';
-import Button from '../UI/Button/Button';
+import { Context } from '../../../context/context';
+import Button from '../Button/Button';
 import './Modal.scss';
 
 const Modal = () => {
