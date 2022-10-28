@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Context } from '../../context/context';
 import { checkIfClosed } from '../../utils';
 import './BanksTable.scss';
@@ -6,11 +6,9 @@ import './BanksTable.scss';
 const BanksTableRow = ({ bank }) => {
     const { isFiltered, addFavorite, removeFavorite } = useContext(Context);
     const isPicked = JSON.parse(localStorage.getItem('fav')).find(id=>id===bank._id);
-    const [isFavorite, setIsFavorite] = useState(isPicked);
     
     const addToFavoritesHandler = (id) => {
-        const isAdd = !isFavorite;
-        setIsFavorite(isAdd);
+        const isAdd = !isPicked;
         isAdd ? addFavorite(id) : removeFavorite(id);
     }
 
