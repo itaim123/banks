@@ -8,7 +8,7 @@ const Main = () => {
   const { currentLocation, setCurrentLocation } = useContext(Context);
   const [banks, setBanks] = useState([]);
   const navigate = useNavigate();
-  // const [currentLocation, setCurrentLocation] = useState(null);
+  const [isError, setIsError] = useState(false);
   const [isLoadingLocation, setIsLoadingLocation] = useState(false);
 
 
@@ -18,11 +18,18 @@ const Main = () => {
       const { latitude, longitude } = coords;
       setCurrentLocation({ latitude, longitude });
       setIsLoadingLocation(false);
+    }, error => {
+      if (error.code == error.PERMISSION_DENIED){
+        setIsError(true)
+      }
     });
   };
 
   const goToBanksPage = () => navigate('/banksList')
 
+  if(isError){
+    return <div>אנא אשר קבלת מיקום ונסה שנית</div>
+  }
   return <div className='main'>
     {isLoadingLocation && <Loader label='מחפש מיקום...' />}
     {!isLoadingLocation && !currentLocation &&
